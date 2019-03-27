@@ -13,15 +13,15 @@ Player::Player(string name, int cardNum): name{name}, cardNum{cardNum} {
 
 
 bool Player::play(Card& currCard){
-  const vector<Card>& cardsTemp=this->get_cards();
+  const vector<Card>& cardsTemp=cards;
   cout<<"current: "<<currCard<<endl;
   cout<<Player::get_name()<<" its your turn"<<endl;
   cout<<"your cards:";
   
 
   int counter=1;
-  vector<Card>::const_iterator iter = get_cards().cbegin();
-   decltype(get_cards().cend()) end_iter = get_cards().cend();
+  vector<Card>::const_iterator iter = cards.cbegin();
+   decltype(cards.cend()) end_iter = cards.cend();
     while (iter != end_iter) { 
     cout <<"("<<counter<<")"<<*iter<<"  ";
     counter++;
@@ -32,7 +32,7 @@ bool Player::play(Card& currCard){
   int choice;
   cin>> choice;
 
-  if(choice<=0||choice>get_cards_number()){
+  if(choice<=0||choice>cardNum){
       cards.push_back(Card::generate_card());
        turnsToSkip=1;
        cardNum++;
@@ -58,10 +58,7 @@ bool Player::play(Card& currCard){
 
 
            currCard=card;
-           vector<Card> cardsVec=get_cards();
-           cardsVec.erase (cardsVec.begin()+choice-1);
-           set_cards(cardsVec);
-
+           cards.erase (cards.begin()+choice-1);
            cardNum--;
 
           

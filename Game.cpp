@@ -7,8 +7,6 @@ using namespace std;
 
 void Game::start(){
     bool isOver=false;
-    Card randomCard=Card::generate_card();
-    Card& currCard=randomCard;
     int playersNum;
     int cardsNum;
     vector<Player> players;
@@ -34,6 +32,9 @@ void Game::start(){
         players.push_back(Player(name,cardsNum));
     }
 
+
+    Card randomCard=Card::generate_card();
+    Card& currCard=randomCard;
    int j=0;
     while(!isOver){
 
