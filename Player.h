@@ -1,3 +1,6 @@
+/*Hodaya Tabibian 313418923*/
+/*Guy Fadida  204289599*/
+
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "Card.h"

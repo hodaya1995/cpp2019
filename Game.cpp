@@ -1,3 +1,6 @@
+/*Hodaya Tabibian 313418923*/
+/*Guy Fadida  204289599*/
+
 #include "Game.h"
 #include "Player.h"
 #include "Card.h"

@@ -1,3 +1,6 @@
+/*Hodaya Tabibian 313418923*/
+/*Guy Fadida  204289599*/
+
 #ifndef CARD_H
 #define CARD_H
 #include <string>
